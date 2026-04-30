@@ -175,17 +175,17 @@ static const ServoStage stages[STAGE_COUNT] = {
 MotionPulse/
 ├── Core/
 │   ├── Inc/
-│   │   └── main.h
+│   │   ├── main.h
+|   |   ├── ssd1306.h
+|   |   └── ssd1306_fonts.h
 │   └── Src/
 │       ├── main.c          # Stage machine, PWM control, OLED dashboard
 │       ├── i2c.c           # I2C1 peripheral config (400 kHz Fast Mode)
 │       └── tim.c           # TIM2 PWM config (50 Hz, 1 µs resolution)
+|       ├── ssd1306.c
+│       └── ssd1306_fonts.c
 ├── Drivers/
-│   ├── STM32F1xx_HAL_Driver/
-│   └── ssd1306/
-│       ├── ssd1306.h
-│       ├── ssd1306.c
-│       └── ssd1306_fonts.h
+│   └── STM32F1xx_HAL_Driver/      
 ├── .ioc                    # STM32CubeMX configuration file
 └── README.md
 ```
