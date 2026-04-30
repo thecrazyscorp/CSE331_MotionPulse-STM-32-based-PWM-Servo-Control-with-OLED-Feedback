@@ -4,7 +4,6 @@
 ![OLED](https://img.shields.io/badge/Display-SSD1306%200.96%22%20I2C-green?style=flat-square)
 ![PWM](https://img.shields.io/badge/Control-PWM%20Continuous%20Servo-orange?style=flat-square)
 ![Timer](https://img.shields.io/badge/Timer-TIM2%20CH2-red?style=flat-square)
-![License](https://img.shields.io/badge/License-MIT-lightgrey?style=flat-square)
 
 > An autonomous fan speed controller using a continuous-rotation servo motor driven by STM32 hardware PWM. The system cycles through 5 speed stages automatically and displays real-time status — mode, direction, PWM pulse, and next-stage countdown — on a 0.96" SSD1306 OLED over I2C.
 
@@ -120,7 +119,7 @@ Next : 7s UP
 
 | Tool | Details |
 |---|---|
-| IDE | STM32CubeIDE |
+| IDE | Keli uvision5 |
 | HAL Library | STM32CubeF1 HAL |
 | Display Driver | SSD1306 I2C (`ssd1306.h` / `ssd1306_fonts.h`) |
 | Language | C (Embedded) |
@@ -133,7 +132,7 @@ Next : 7s UP
 
 ### Prerequisites
 
-- STM32CubeIDE installed
+- Keli uvision5 installed
 - ST-Link V2 programmer
 - STM32CubeF1 HAL package
 - SSD1306 I2C driver library (`ssd1306.h`, `ssd1306_fonts.h`)
@@ -144,10 +143,11 @@ Next : 7s UP
    ```bash
    git clone https://github.com/your-username/MotionPulse-STM32-based-PWM-Servo-Control-with-OLED-Feedback.git
    ```
-2. Open the project folder in **STM32CubeIDE**.
+2. Open the project folder in **Keli uvision5**.
 3. Build: `Project → Build All`
 4. Connect Blue Pill via ST-Link V2.
-5. Flash: `Run → Run` or `Run → Debug`
+5. Open STM32 STLink Utility
+6. Connect the device -> Program verify -> Select the generated hex file
 
 ### Customising Stage Timings or Speeds
 
@@ -189,12 +189,6 @@ MotionPulse/
 ├── .ioc                    # STM32CubeMX configuration file
 └── README.md
 ```
-
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ---
 
